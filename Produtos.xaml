@@ -1,0 +1,60 @@
+﻿<Window x:Class="Sistema.Produtos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sistema"
+        mc:Ignorable="d" Height="700" Width="700" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Loaded="Window_Loaded">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black" Offset="0"/>
+            <GradientStop Color="#FF979292" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+
+    <Grid Margin="-1,0,-158,-3" Background="White" Initialized="Grid_Initialized" HorizontalAlignment="Left" Width="859">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Foreground="Gray" FontFamily="Times New Roman" FontSize="45" Margin="249,40,0,599" HorizontalAlignment="Left" Width="203">Produtos</Label>
+
+        <Rectangle Margin="27,0,0,430" Stroke="white" Fill="#FFEFEFEF" Height="102" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="639"/>
+
+
+
+        <TextBox x:Name="tdescricao" BorderThickness="1" Background="White" FontSize="15" Margin="391,207,0,463" TextChanged="Tdescricao_TextChanged" HorizontalAlignment="Left" Width="251"/>
+        <Label Content="LISTA DE PRODUTOS" FontSize="15" FontFamily="TIMES NEW ROMAN" Foreground="GRAY" HorizontalAlignment="Left" Margin="296,307,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.658,1.346"/>
+        <Button Content="CADASTRAR" FontSize="12" FontFamily="times new roman" FontWeight="Bold" Background="Green" HorizontalAlignment="Left" Margin="67,571,0,0" VerticalAlignment="Top" Width="155" Height="55" Click="Cadastrar_Click" RenderTransformOrigin="0.868,0.333"/>
+        <Image Source="iconProdutos1.png" HorizontalAlignment="Left" Height="35" Margin="71,582,0,0" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0.4,-0.7"/>
+        <Button Content ="ATUALIZAR"   Background="blue" FontFamily="TIMES NEW ROMAN" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" Margin="270,567,415,0" VerticalAlignment="Top" Width="156" Height="55" Click="Alterar_Click_1"/>
+        <Image Source="alterar1.png"  Height="37" Margin="278,575,529,0" VerticalAlignment="Top" RenderTransformOrigin="0.369,0.057"/>
+        <Button Content="EXCLUIR" FontSize="12" FontFamily="times new roman" FontWeight="Bold" Background="red" HorizontalAlignment="Left" Margin="472,568,0,0" VerticalAlignment="Top" Width="155" Height="55" Click="Excluir_Click" RenderTransformOrigin="0.868,0.333"/>
+        <Image Source="delete2.png" HorizontalAlignment="Left" Height="35" Margin="481,579,0,0" VerticalAlignment="Top" Width="31" RenderTransformOrigin="-4.737,-0.668"/>
+        <Image Source="icones_produtos.png" Margin="562,24,0,596" HorizontalAlignment="Left" Width="85" Opacity="0.3"/>
+        <DataGrid x:Name="DtgridProdutos1" ItemsSource="{Binding Load}" IsReadOnly="True" AutoGenerateColumns="False" HorizontalAlignment="Left" Background="WhiteSmoke" Height="170" Margin="153,360,0,0" VerticalAlignment="Top" Width="465" RenderTransformOrigin="0.5,0.5" ScrollViewer.CanContentScroll="True"  ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.VerticalScrollBarVisibility="Visible" SelectionChanged="DtgridProdutos1_SelectionChanged" >
+            <DataGrid.Columns >
+                <DataGridTextColumn Binding="{Binding cod}" Header="COD" FontSize="20" TextBlock.TextAlignment="Right" />
+                <DataGridTextColumn Binding="{Binding descricao}" Header="DESCRIÇÃO" FontSize="20" TextBlock.TextAlignment="Left" />
+
+
+
+
+
+
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <Label x:Name="Cod" Content="Cod:" Foreground="Gray" FontFamily="Times New Roman" FontSize="25"  Margin="75,204,0,461" FontStyle="Normal" Width="65" HorizontalAlignment="Left" RenderTransformOrigin="0.12,-0.8"/>
+        <TextBox x:Name="tcodigo" HorizontalAlignment="Left" Height="30" Margin="163,210,0,0" TextWrapping="Wrap" BorderThickness="1" Background="White" VerticalAlignment="Top" Width="60" RenderTransformOrigin="-1.292,-4.13" TextChanged="Tcodigo_TextChanged"/>
+        <Image Source="icone-voltar2.png" HorizontalAlignment="Left" Height="50" Margin="29,13,0,0" VerticalAlignment="Top" Width="70" RenderTransformOrigin="0.5,0.5" MouseDown="voltar_MouseDown_1"/>
+        <Label x:Name="Descricao" Content="Descricao:" Foreground="Gray" FontFamily="Times New Roman" FontSize="25"  Margin="257,206,0,459" FontStyle="Normal" Width="119" HorizontalAlignment="Left" RenderTransformOrigin="0.12,-0.8"/>
+        <Label x:Name="thora" HorizontalAlignment="Left" Content="label" Foreground="Blue" Margin="645,670,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.743,0.846"/>
+        <Label  x:Name="tdata" HorizontalAlignment="Left" Content="label" Foreground="Blue" Margin="571,670,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.895,0.385"/>
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,124 @@
+﻿<Window x:Class="Sistema.DashBoard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sistema"
+        mc:Ignorable="d" Height="700" Width="1200" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Loaded="Window_Loaded">
+
+
+    <Grid Background="#FF1C1149">
+
+        <Grid Grid.Column="1"  Grid.Row="1" Background="White" Margin="9,3,9,21" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="929*"/>
+                <ColumnDefinition Width="34*"/>
+                <ColumnDefinition Width="9"/>
+                <ColumnDefinition Width="8*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel HorizontalAlignment="Left" Height="29" Margin="7,-35,-20,0" VerticalAlignment="Top" Width="32" RenderTransformOrigin="0.931,-0.013" Grid.Column="2" Grid.ColumnSpan="3"/>
+            <Rectangle HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Width="Auto" Height="Auto" Fill="Orange" Margin="88,236,38,-11" RenderTransformOrigin="0.398,0.015" />
+            <Calendar HorizontalAlignment="Left" Margin="164,284,0,0" VerticalAlignment="Top" Width="500" Height="350" Background="#FFF3F2F2" ForceCursor="True" Foreground="#DD151DBB" AllowDrop="True">
+                <Calendar.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFA3AEB9" Offset="0"/>
+                        <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                        <GradientStop Color="#FF718597" Offset="0.375"/>
+                        <GradientStop Color="#FF142532" Offset="1"/>
+                    </LinearGradientBrush>
+                </Calendar.BorderBrush>
+            </Calendar>
+            <StackPanel HorizontalAlignment="Left" Height="139" Margin="153,68,0,0" VerticalAlignment="Top" Width="289"/>
+            <Label Content="Fornecedores" Foreground="White" FontFamily="times new roman" FontWeight="Bold" FontSize="15" HorizontalAlignment="Left" Margin="-122,308,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.737,-1.545" Height="36" Width="144" MouseDown="fornecedores_MouseDown"/>
+            <Label x:Name="thora" Content="Label" Foreground="Blue" HorizontalAlignment="Left" Margin="7,615,-22,0" VerticalAlignment="Top" Width="68" Grid.Column="1" Grid.ColumnSpan="4" Height="26"/>
+            <Rectangle Fill="white" HorizontalAlignment="Left" Height="70" Margin="562,52,0,0" Stroke="Gray" VerticalAlignment="Top" Width="146"/>
+            <Image Source="iconProdutos1.png" HorizontalAlignment="Left" Height="32" Margin="576,70,0,0" VerticalAlignment="Top" Width="43"/>
+            <Label Content="Produtos&#xD;&#xA;Vendidos" Foreground="Green" FontFamily="times new roman" FontSize="15" FontWeight="Bold" HorizontalAlignment="Left" Margin="621,64,0,0" VerticalAlignment="Top" Width="80" MouseDown="ProdutosVendidos_MouseDown" Height="44"/>
+            <Rectangle Fill="white" HorizontalAlignment="Left" Height="70" Margin="735,56,0,0" Stroke="Gray" VerticalAlignment="Top" Width="159"/>
+            <Image Source="imgVendas.jpg" HorizontalAlignment="Left" Height="56" Margin="743,60,0,0" VerticalAlignment="Top" Width="55"/>
+            <Label Content="Produtos &#xD;&#xA;Comprados" Foreground="Green" FontSize="15" FontWeight="Bold" FontFamily="times new roman" HorizontalAlignment="Left" Margin="797,65,0,0" VerticalAlignment="Top" MouseDown="ProdutosComprados_MouseDown" Height="44" Width="85"/>
+
+
+
+        </Grid>
+
+        <Label Content="Clientes" Foreground="White" FontFamily="times new roman" FontWeight="Bold" FontSize="15" Margin="87,90,863,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="-0.737,-1.545" Height="34" MouseDown="Cliente_MouseDown" Grid.ColumnSpan="2"/>
+        <Label Content="Compras" Foreground="White" FontFamily="times new roman" FontWeight="Bold" FontSize="15" HorizontalAlignment="Left" Margin="90,235,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="-0.737,-1.545" Height="31" Width="112" MouseDown="Compras_MouseDown" Grid.ColumnSpan="2"/>
+        <Label Content="Produtos" Foreground="White" FontFamily="times new roman" FontWeight="Bold" FontSize="15" HorizontalAlignment="Left" Margin="90,302,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="-0.737,-1.545" Height="40" Width="104" MouseDown="Produtos_MouseDown"/>
+        <Label Content="Vendas" Foreground="White" FontFamily="times new roman" FontWeight="Bold" FontSize="15" HorizontalAlignment="Left" Margin="90,371,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="-0.737,-1.545" Height="40" Width="108" MouseDown="Vendas_MouseDown"/>
+        <Image Source="mbt web.png"  Margin="32,25,18,0" RenderTransformOrigin="0.483,0.241" Grid.Row="1" Height="81" VerticalAlignment="Top"/>
+        <Rectangle Fill="white" Stroke="Gray" HorizontalAlignment="Left" Width="166" Grid.Column="1" Margin="26,52,0,0" Grid.Row="1" Height="74" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" />
+        <Image Source="vendas.jpg" Grid.Column="1" Margin="24,68,802,42" Grid.Row="1"/>
+        <Label Content=" Relatórios&#xD;&#xA;Vendas" Foreground="Green" FontFamily="times new roman" FontWeight="Bold" FontSize="15"  Margin="83,65,717,0" VerticalAlignment="Top" RenderTransformOrigin="-0.737,-1.545" Height="42" Grid.Column="1" Grid.Row="1" MouseDown="relatoriovendas_MouseDown">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.06"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Rectangle Fill="white" Stroke="Gray" HorizontalAlignment="Left" Width="152" Grid.Column="1" Margin="222,55,0,0" Grid.Row="1" Height="70" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" />
+        <Image Source="frete.png" Grid.Column="1" Margin="228,76,598,44" Grid.Row="1" RenderTransformOrigin="1.65,0.239"/>
+        <Label Content="Fretes" Foreground="Green" FontFamily="times new roman" FontWeight="Bold" FontSize="15" HorizontalAlignment="Left" Margin="283,71,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.737,-1.545" Height="37" Width="68" Grid.Column="1" MouseDown="fretes_MouseDown"/>
+        <Rectangle Fill="white" Stroke="Gray" HorizontalAlignment="Left" Width="136" Grid.Column="1" Margin="401,54,0,0" Grid.Row="1" Height="70" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" />
+        <Image Source="controle_estoque.png" Grid.Column="1" Margin="414,76,438,42" Grid.Row="1"/>
+        <Label Content="Relatorios &#xD;&#xA;Compras" Foreground="Green" FontFamily="times new roman" FontWeight="Bold" FontSize="15" HorizontalAlignment="Left" Margin="457,67,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.737,-1.545" Height="48" Width="83" Grid.Column="1" MouseDown="relatoriosFretes_MouseDown"/>
+        <StackPanel HorizontalAlignment="Left" Height="532" Margin="6,33,0,-41" Grid.Row="2" VerticalAlignment="Top" Width="191"/>
+
+        <Image Source="box.png" Margin="-34,299,188,189" Grid.Row="2" RenderTransformOrigin="1.294,0.457">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.925"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Source="imgvendas1.png" Margin="-594,359,726,127" Grid.Row="2" RenderTransformOrigin="-9.55,0.193">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.435"/>
+                    <TranslateTransform X="1366.85" Y="5.191"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Source="imgcompras1.png" Margin="0,229,148,259" Grid.Row="2" RenderTransformOrigin="0.788,0.746">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.566"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Source="imgfornecedor1.jpg" Margin="22,155,126,331" Grid.Row="2" RenderTransformOrigin="-0.731,0.776"/>
+        <Image Source="imgclientes.jpg" Margin="20,82,126,402" Grid.Row="2"/>
+        <Image Source="imgsair.jpg" Margin="65,6,2,0" Grid.Column="2" RenderTransformOrigin="0.5,1.068" Height="19" VerticalAlignment="Top" MouseDown="btSair_MouseDown"/>
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="200"   />
+            <ColumnDefinition Width="443*"/>
+            <ColumnDefinition Width="57*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="43*"/>
+        </Grid.RowDefinitions>
+
+
+
+
+    </Grid>
+</Window>
+
+
+  
+
